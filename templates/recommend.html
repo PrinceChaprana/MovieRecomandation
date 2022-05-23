@@ -1,0 +1,71 @@
+<!--
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Google Fonts 
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+	<!-- Font Awesome 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Bootstrap 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+
+    </head>
+    <body>
+        <div class="results">
+            <center>
+              <h2 id="name" class="text-uppercase">{{title}}</h2>
+            </center>
+        </div>
+    -->
+
+{% block content%}
+<div class='Movie_container'>
+    <div class='movie-img'>
+        <img src="{{poster}}">
+        <div class="Movie-detail-container">
+            <div class="movie-cont-marg">
+                <div class="movie-name">{{title}}</div>
+                <div class="horiz-detail col-md-3">
+                    <div class="movie_length">{{runtime}}</div>
+                    <div class="movie-genre">{{genres}}</div>
+                    <div class="movie-date">{{release_date}}</div>
+                </div>
+                <div class="movie-overview">{{overview}}</div>
+                <div class="movie-imdb">{{vote_average}}</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<main id="main">
+{% for poster, title in movie_cards.items() %}
+<div title="{{title}}" class="card m-4 bg-primary" style="width: 18rem;background-color: #E7b418!important;"
+            onclick="recommendMovie(this)">
+            <img class="card-img-top" src="{{poster}}" alt="{{title}}">
+            <div class="card-body">
+                <h5 class="card-title" style="color:rgb(255, 255, 255);">{{title}}</h5>
+            </div>
+        </div>
+{% endfor %}
+</main>
+
+{% endblock %}
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="{{url_for('static', filename='recommand.js')}}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    </body>
+</html>
+-->

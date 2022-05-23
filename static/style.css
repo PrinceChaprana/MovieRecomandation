@@ -1,0 +1,173 @@
+* {box-sizing: border-box;}
+body{
+    display: block;
+    background-color: #303031
+    ;
+    font-family:'Ubuntu', sans-serif ;
+}
+
+header{
+    width: 100%;
+    border-bottom: 5px solid #E7b418;
+}
+
+.title_container{
+    display: flex;
+    justify-content: center;
+}
+.spacer{
+    margin-left: 30%;
+}
+.search-box-container {
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .search-box-container input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+  }
+  .input_field{
+      
+    width: 200px;
+  }
+  
+.search-box-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #E7b418;
+    font-size: 17px;
+    
+    border: none;
+    cursor: pointer;
+  }
+  
+.search-box-container button:hover {
+    background: #ccc;
+  }
+
+hr{
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 0px;
+    border-top: 1px solid #E7b418;
+}
+
+.title_name{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    color:aliceblue;
+    margin: 5px 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie_box{
+    width: 300px;
+    margin: 20px;
+    background-color: #E7b418;
+
+}
+.movie_box button{
+    width: 100%;
+    height: 100%;
+    color: #30303100;
+    border: none;
+}
+.movie_box img{
+    width: 98%;
+    margin-left: 1%;
+    margin-top: 1%;
+    justify-content: center;
+}
+.movie_title{
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: large;
+    color: darkgrey;
+    margin: 10px;
+}
+
+.Movie_container{
+    position: relative;
+    width: 1000px;
+    margin-left: 20%;
+    height: 567px;
+    
+}
+
+.movie-img{
+    display: flex;
+    justify-content: center;     
+}
+.movie-img img{
+    width: 1000px;
+    height: auto;
+    position: absolute;
+}
+.Movie-detail-container{
+    position: absolute;
+    width: 70%;
+    background-color: #ffffff55;
+    color: #ffffff;
+    bottom: 5px;
+    left: 0px;
+    font-size: 18px;
+}
+.movie-cont-marg{
+    margin-left: 20px;
+}
+.movie-name{
+    font-size: 50px
+}
+.horiz-detail{
+    display: flex;
+    justify-content: left;
+    width: 70%;
+    margin-top: 5px;
+}
+.movie_length{
+    display: inline-block;
+    margin-right: 50px;
+}
+.movie-genre{
+    display: inline-block;
+    
+    margin-right: 100px;
+}
+.movie-date{
+    display: inline-block;
+}
+.movie-overview{
+    margin-top: 5px;
+    font-size: 15px;
+    margin-bottom: 30px;
+    justify-content: center;
+    width: 70%;
+
+}
+.movie-imdb{
+    right: 0px;
+    bottom: 0px;
+    
+    margin:5px; 
+    position: absolute;
+    text-align: right;
+    font-size: 150px
+}

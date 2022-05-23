@@ -1,0 +1,11 @@
+#navcol-1{
+    margin-right: 40px;
+}
+#titleText{
+    margin-right:30px ;
+}
+#buttonn{
+    border: none;
+    background-color:rgba(250, 235, 215, 0);
+    font-weight: 500;
+}
